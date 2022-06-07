@@ -1,11 +1,12 @@
-import { CoffeeMachineOutput, Drink, NumberOfSugar, Stick } from ".";
+import { CoffeeMachineOutput, Drink, NumberOfSugar, Stick } from "./serving";
 
-type DrinkOuput = "H" | "T" | "C";
+type DrinkOuput = "H" | "T" | "C" | "O";
 
 const drinkMapping: Record<Drink, DrinkOuput> = {
   chocolate: "H",
   coffee: "C",
   tea: "T",
+  "orange juice": "O",
 };
 
 const numberOfSugarMapping: Record<NumberOfSugar, string> = {
@@ -27,4 +28,12 @@ export const printCoffeeMachineOutput = ({ drink, numberOfSugar, stick }: Coffee
   // TODO: handle "M:message-content"
 
   return `${drinkOutput}:${numberOfSugarOutput}:${stickOutput}`;
+};
+
+export const isThereEnoughBeverageAvailable = (): boolean => {
+  return;
+};
+
+export const notifyMissingDrink = () => {
+  return;
 };
